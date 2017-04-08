@@ -16,7 +16,7 @@ def start():
     headers = {
         'Content-type': 'application/json',
     }
-    data = open('/var/www/mesos-marathon-web-client/app/api-test.json')
+    data = open('/var/www/mesos-marathon-web-client/app/api-test.json')			#your marathon url goes here
     requests.post('http://node1.mesoscluster.net:8080/v2/apps',
                   headers=headers, data=data)
     return redirect('')
@@ -24,7 +24,7 @@ def start():
 
 @app.route("/stop")
 def stop():
-    requests.delete('http://node1.mesoscluster.net:8080/v2/apps/api-test')
+    requests.delete('http://node1.mesoscluster.net:8080/v2/apps/api-test')		#your marathon url goes here
     return redirect('')
 
 
