@@ -3,32 +3,27 @@
 ### Operating System : Ubuntu 14.04.5
 
 Step 1: Update your Operating System
-      ```$ 
-        sudo apt-get update -y
-      ```  
+
+     $ sudo apt-get update -y
 
 Step 2: Install Apache & Project Dependencies
-    ```$
-        sudo apt-get install apache2 libapache2-mod-wsgi python python-dev git vim -y 
-    ```
+
+    $ sudo apt-get install apache2 libapache2-mod-wsgi python python-dev git vim -y 
+
 Step 3: Enable mod_wsgi
-        ```$
-        sudo a2enmod wsgi
-        ```
+
+    $ sudo a2enmod wsgi
 Step 4: Go to Apache ROOT Directory
-        ```$
-        cd /var/www
-        ```
+
+    $ cd /var/www
 
 Step 5: Clone Project Files
-        ```$ 
-        sudo git clone https://github.com/timam/mesos-marathon-web-client.git
-        ```
+    
+    $ sudo git clone https://github.com/timam/mesos-marathon-web-client.git
 
 Step 6: Replace default apache configuration with the following lines
-    ```$
-	sudo vim /etc/apache2/sites-availabe/000-default.conf
-	```
+
+    $ sudo vim /etc/apache2/sites-availabe/000-default.conf
 ----------
 	<VirtualHost *:80>
                 WSGIScriptAlias / /var/www/mesos-marathon-web-client/app.wsgi
@@ -47,7 +42,6 @@ Step 6: Replace default apache configuration with the following lines
 	</VirtualHost>
 ----------
 Step 7: Restart Apache
-        ```$
-        sudo service apache2 restart
-        ```
+
+        $ sudo service apache2 restart
 
