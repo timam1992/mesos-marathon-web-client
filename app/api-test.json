@@ -1,0 +1,8 @@
+{
+  "id": "api-test",
+  "cmd": "python -m SimpleHTTPServer  $PORT",
+  "cpus": 0.1,
+  "mem": 128,
+  "disk": 128,
+  "instances": 1
+}
