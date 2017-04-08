@@ -1,5 +1,5 @@
-#Setup Guideline
-
+<h1>Setup Guideline</h1>
+<p>
 Operating System : Ubuntu 14.04.5
 
 Step 1: Update your Operating System
@@ -19,6 +19,7 @@ Step 5: Clone Project Files
 
 Step 6: Replace default apache configuration with the following lines
 	sudo vim /etc/apache2/sites-availabe/000-default.conf
+</p>
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	<VirtualHost *:80>
                 WSGIScriptAlias / /var/www/mesos-marathon-web-client/app.wsgi
@@ -36,5 +37,6 @@ Step 6: Replace default apache configuration with the following lines
                 CustomLog ${APACHE_LOG_DIR}/access.log combined
 	</VirtualHost>
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Step 7: Restart Apache
         sudo service apache2 restart
